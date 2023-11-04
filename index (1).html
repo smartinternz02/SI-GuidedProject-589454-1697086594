@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index</title>
+        <style>
+            body{
+                color: #fff;
+            }
+            .heading{
+                padding-top: 15px;
+            }
+         .bg-container{
+            background-image:url("https://res.cloudinary.com/dcov5df8b/image/upload/v1699004220/mypmu7aiaq9hoctxus1i.jpg");
+            background-size: cover;
+            text-align: center;
+            height: 100vh;
+            background-size:cover ;
+
+         }
+         .btn{
+            background-color: green;
+            width: 30%;
+            color: white;
+            margin-top: 20px;
+            padding: 10px;
+            border-width: 0;
+            border-radius: 5px;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="bg-container te">
+        <h1 class="heading"> ZOMBIE DETECTOR</h1>
+        <H2>using ML to save lives during a Zombie Apocalypse</H2>
+        <form action="/predict" method="post">
+            Age <br><input type="text" name="age">
+            <br>
+            Sex<br><input type="radio" value="0" name="gender">Male
+            <input type="radio" value="1" name="gender">Female<br>
+            Rurality<br>
+            <select name="Rurality">
+                <option value="0">rural</option>
+                <option value="1">Urban</option>   
+            </select><br>
+            Household <br>
+            <input type="integer" name="Number"><br>
+            Water <br>
+            <input type="integer" name="Gallons"><br>
+           Food<br>
+            <select name="Food" aria-placeholder="Select Availablity">
+                <option value="0">Available</option>
+                <option value="1">Not Available</option>   
+            </select><br>
+            Medication
+            <br>
+            <select name="Medication">
+                <option value="0">Available</option>
+                <option value="1">Not Available</option>   
+            </select><br>
+            Tools<br>
+            <select name="Tools">
+                <option value="0">Available</option>
+                <option value="1">Not Available</option>   
+            </select><br>
+            First Aid<br>
+            <select name="First Aid">
+                <option value="0">Available</option>
+                <option value="1">Not Available</option>   
+            </select><br>
+            Sanitation<br>
+            <select name="Sanitation">
+                <option value="0">Available</option>
+                <option value="1">Not Available</option>   
+            </select><br>
+            Clothing<br>
+            <select name="Clothing">
+                <option value="0">Available</option>
+                <option value="1">Not Available</option>   
+            </select><br>
+            Documents<br>
+            <select name="Documents">
+                <option value="0">Available</option>
+                <option value="1">Not Available</option>   
+            </select><br>
+            <button class="btn">DETECT </button>
+            {{ prediction_text }}
+
+            <br>
+        </form>
+    </div>
+
+        </div>
+    </body>
+</html>
